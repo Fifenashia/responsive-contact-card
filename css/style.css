@@ -1,0 +1,100 @@
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:grey;
+    gap: 16px;
+    width: 100%;
+    margin: 24px auto;
+    padding: 16px;
+
+}
+
+.profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.name {
+    color:rgb(84, 31, 42);
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.title, .phone {
+    margin: 6px 0;
+}
+
+.company-name {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+.tagline {
+    font-style: italic;
+    color:rgb(84, 31, 42);
+}
+
+@media (min-width: 600px) {
+  .card {
+    min-height: 480px;
+    max-width: 700px;
+    justify-content: space-between;
+  }
+  .profile-pic {
+    width: 300px;
+    height: 300px;
+    justify-self: center;
+  }
+
+  .company-name {
+    margin-top: 0;
+  }
+
+  .contact-info {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 32px;
+    text-align: left;
+    align-items: end;
+  }
+
+  .name, .title, .phone { grid-column: 1; }
+  .company-name, .tagline { grid-column: 2; text-align: right; }
+}
+
+@media (min-width: 900px) {
+  .card {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    align-items: end;
+    max-width: 900px;
+    min-height: 320px;
+  }
+
+  .profile-pic {
+    width: 300px;
+    height: 300px;
+    justify-self: center;
+  }
+
+  .contact-info {
+    display: block;
+    text-align: right;
+    margin-top: 0;
+  }
+}
+
+
